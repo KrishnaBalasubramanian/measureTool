@@ -21,7 +21,7 @@ autoComp = '1E-3' ### auto range compliance
 K2636BAddress='GPIB::26::INSTR'
 K6221Address='GPIB::12::INSTR'
 rCount = 0
-
+version = "1.0"
         
 
 
@@ -36,7 +36,7 @@ rCount = 0
 logging.basicConfig(filename= "logFile.txt", filemode='a',format='%(asctime)s - %(levelname)s -%(message)s',level=logging.INFO)
 logging.info('Logging is started')
 root = tk.Tk()
-window = MainWindow(root)
+window = MainWindow(root,version)
 root.mainloop()
 logging.info('Logging ended')
 

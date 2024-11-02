@@ -35,12 +35,12 @@ matplotlib.use('TkAgg')
 ################TitleFrame#########ControlFrame##########plotFrame#########LegendFrame################
 #############################ConfigFrame##DVIV##MOSFET######################
 class MainWindow(): ## an Object oriented frame class
-    def __init__(self,master):
+    def __init__(self,master,version="1.0"):
         self.root = master
         mainFrame=tk.Frame(master)
         mainFrame.pack(padx=10,pady=10,fill='both',expand=1)
         self.titleFrame = tk.Frame(mainFrame)
-        lbl_1 = tk.Label(master=self.titleFrame, text="Measurement Tool", font = ('Calibri',14,'bold'))
+        lbl_1 = tk.Label(master=self.titleFrame, text="Measurement Tool V" + str(version), font = ('Calibri',14,'bold'))
         lbl_1.pack()
         self.titleFrame.grid(row=0,column=0)
         #self.controlFrame = tk.Frame(mainFrame,highlightbackground="black", highlightthickness=1, width=100, height=100, bd=0)
